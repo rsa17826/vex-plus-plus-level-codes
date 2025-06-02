@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Check for deleted files
         run: |
-          git diff --name-status HEAD^ HEAD | grep '^D' && exit 1 || exit 0
+          git diff HEAD~1 HEAD | grep '+++ b/s' && exit 1 || exit 0
