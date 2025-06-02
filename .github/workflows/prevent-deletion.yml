@@ -1,0 +1,14 @@
+﻿name: Prevent File Deletion
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  prevent-deletion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for deleted files
+        run: |
+          git diff --name-status HEAD^ HEAD | grep '^D' && exit 1 || exit 0
