@@ -32,7 +32,6 @@ jobs:
             echo $file
             if [[ $file != db/* ]]; then
               echo "This modified file is not under the 'db' folder."
-              echo "::set-output name=run_job::false"
               echo "run_job=false" >> $GITHUB_OUTPUT
               break
             else
