@@ -23,12 +23,10 @@ jobs:
         run: |
           case '${{ github.event_name }}' in
             push)
-              firstCommit='${{ github.event.commits[0].id }}'
-              lastCommit='${{ github.event.commits[-1].id }}'
+              changedFiles=$(git diff --name-only --diff-filter=d "${GITHUB_EVENT_BEFORE}" "${GITHUB_SHA}")
               ;;
             pull_request)
-              firstCommit='${{ github.event.base_ref }}'
-              lastCommit='${{ github.event.head_ref }}'
+              changedFiles=$(git diff --name-only --diff-filter=d "${GITHUB_EVENT_BASE_REF}" "${GITHUB_EVENT_HEAD_REF}")
               ;;
           esac
-          changedFiles=$(git diff --name-only --diff-filter=d "${firstCommit}~1" "${lastCommit}")
+          echo "$changedFiles"
