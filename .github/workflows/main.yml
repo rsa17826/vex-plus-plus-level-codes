@@ -1,40 +1,38 @@
-# This is a basic workflow to help you get started with Actions
+# # This is a basic workflow to help you get started with Actions
 
-name: CI
+# name: CI
 
-# Controls when the workflow will run
-on:
-  pull_request:
-    branches: [main]
-  push:
-    branches: [main]
+# # Controls when the workflow will run
+# on:
+#   push:
+#     branches: [main]
 
-jobs:
-  get_files:
-    name: run_on_pr_or_push
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 0
+# jobs:
+#   get_files:
+#     name: run_on_push
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@master
+#         with:
+#           fetch-depth: 0
 
-      - name: check modified files
-        id: check_files
-        run: |
-          echo "=============== list modified files ==============="
-          git diff --name-only HEAD^ HEAD
+#       - name: check modified files
+#         id: check_files
+#         run: |
+#           echo "=============== list modified files ==============="
+#           git diff --name-only HEAD^ HEAD
           
-          echo "========== check paths of modified files =========="
-          git diff --name-only HEAD^ HEAD > files.txt
-          while IFS= read -r file
-          do
-            echo $file
-            if [[ $file != db/* ]]; then
-              echo "This modified file is not under the 'db' folder."
-              echo "run_job=false" >> $GITHUB_OUTPUT
-              break
-            else
-              echo "run_job=true" >> $GITHUB_OUTPUT
-            fi
-          done < files.txt
+#           echo "========== check paths of modified files =========="
+#           git diff --name-only HEAD^ HEAD > files.txt
+#           while IFS= read -r file
+#           do
+#             echo $file
+#             if [[ $file != db/* ]]; then
+#               echo "This modified file is not under the 'db' folder."
+#               echo "run_job=false" >> $GITHUB_OUTPUT
+#               break
+#             else
+#               echo "run_job=true" >> $GITHUB_OUTPUT
+#             fi
+#           done < files.txt
