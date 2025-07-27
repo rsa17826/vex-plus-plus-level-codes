@@ -24,30 +24,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-        with:
-          script: |
-            const { execSync } = require('child_process')
-            const { commits } = context.payload.pull_request
-            const rawFiles = execSync(`git diff --name-only HEAD HEAD~${commits}`).toString()
-            const files = rawFiles.split('\n').filter(Boolean)
-
-            console.log(files)
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo "Commit Information:"
-          echo "---------------------"
-          echo "GITHUB_REF: ${GITHUB_REF}"
-          echo "GITHUB_SHA: ${GITHUB_SHA}"
-          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+          const { execSync } = require('child_process')
+          const { commits } = context.payload.pull_request
+          const rawFiles = execSync(`git diff --name-only HEAD HEAD~${commits}`).toString()
+          const files = rawFiles.split('\n').filter(Boolean)
 
-          # Print changed files
-          echo "\nChanged Files:"
-          echo "--------------"
-          git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
-
-          # Print commit message
-          echo "\nCommit Message:"
-          echo "---------------"
-          git log -1 --pretty=format:%s
+          console.log(files)
