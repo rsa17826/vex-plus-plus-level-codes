@@ -37,9 +37,12 @@ jobs:
           # Print changed files
           echo "\nChanged Files:"
           echo "--------------"
-          git diff --name-only
+          for file in ${GITHUB_EVENT.changes[*]}; do
+            echo "$file"
+          done
 
           # Print commit message
           echo "\nCommit Message:"
           echo "---------------"
-          git log -1 --pretty=format:%s
+          echo "${GITHUB_EVENT.head_commit.message}"
+
