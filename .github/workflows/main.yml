@@ -37,7 +37,7 @@ jobs:
           # Print changed files
           echo "\nChanged Files:"
           echo "--------------"
-          for file in ${GITHUB_EVENT.changes[*]}; do
+          for file in ${GITHUB_EVENT.changes}; do
             echo "$file"
           done
 
