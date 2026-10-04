@@ -1,6 +1,96 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/short-level--1.json",
+      "levelName": "short level #1",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 191,
+      "levelVersion": 46,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:37Z"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---solar-attach-bug.json",
+      "levelName": "uno mas - solar attach bug",
+      "creatorName": "rssaromeo",
+      "description": "shows a bug where solars don't get attached to if respawning while they are disabled",
+      "gameVersion": 125,
+      "levelVersion": 8,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:34Z"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---zipline-death-warp.json",
+      "levelName": "uno mas - zipline death warp",
+      "creatorName": "rssaromeo",
+      "description": "dying while on a pulley causes the player y to be that of the pulley instead of the player's spawn point",
+      "gameVersion": 163,
+      "levelVersion": 177,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:33Z"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--23.json",
+      "levelName": "real map #23",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 198,
+      "levelVersion": 202,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:30Z"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---post-death-momentum.json",
+      "levelName": "uno mas - post death momentum",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 191,
+      "levelVersion": 21,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:28Z"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--13.json",
+      "levelName": "real map #13",
+      "creatorName": "rssaromeo",
+      "description": "my first nojump map",
+      "gameVersion": 93,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:22Z"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---swim-in-air.json",
+      "levelName": "uno mas - swim in air",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 191,
+      "levelVersion": 65,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:19Z"
+    },
+    {
+      "path": "levels/rssaromeo/checkpointless-checkpoint-bug.json",
+      "levelName": "checkpointless checkpoint bug",
+      "creatorName": "rssaromeo",
+      "description": "shows a bug that allows a setup that saves progress like a checkpoint but without using checkpoints",
+      "gameVersion": 81,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:17Z"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--24.json",
+      "levelName": "real map #24",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 198,
+      "levelVersion": 54,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:15Z"
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---star-checkpoint.json",
       "levelName": "uno mas - star checkpoint",
       "creatorName": "rssaromeo",
@@ -49,6 +139,86 @@
       "levelVersion": -1,
       "verified": true,
       "uploadedAt": "2026-10-04T21:54:30Z"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--17.json",
+      "levelName": "real map #17",
+      "creatorName": "rssaromeo",
+      "description": "trying to make a map using every block in every way i can think of",
+      "gameVersion": 118,
+      "levelVersion": 398,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:53-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---sticky-button.json",
+      "levelName": "uno mas - sticky button",
+      "creatorName": "rssaromeo",
+      "description": "crouching and dying while on a floor button causes the button to be pressed down until the player represses and releases the button",
+      "gameVersion": 104,
+      "levelVersion": 26,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:43-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---more-extra-jumps.json",
+      "levelName": "uno mas - more extra jumps",
+      "creatorName": "rssaromeo",
+      "description": "getting pushed off a ledge doesn't remove a jump",
+      "gameVersion": 115,
+      "levelVersion": 16,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:40-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--19.json",
+      "levelName": "real map #19",
+      "creatorName": "rssaromeo",
+      "description": "a twicetwice of the level \"socal security card\" by Yippie",
+      "gameVersion": 135,
+      "levelVersion": 294,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:31-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--10.json",
+      "levelName": "real map #10",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 85,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:26-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--22.json",
+      "levelName": "real map #22",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 179,
+      "levelVersion": 208,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:24-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/moving-things.json",
+      "levelName": "moving things",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 46,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:21-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---post-death-win.json",
+      "levelName": "uno mas - post death win",
+      "creatorName": "rssaromeo",
+      "description": "even in death the player can still collide with goals",
+      "gameVersion": 94,
+      "levelVersion": 1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:18-04:00"
     },
     {
       "path": "levels/rssaromeo/vex-3.json",
