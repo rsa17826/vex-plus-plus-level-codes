@@ -161,6 +161,16 @@
       "uploadedAt": "2026-10-04T21:54:30Z"
     },
     {
+      "path": "levels/rssaromeo/uno-mas---slide-push.json",
+      "levelName": "uno mas - slide push",
+      "creatorName": "rssaromeo",
+      "description": "you can just push boxes while sliding",
+      "gameVersion": 136,
+      "levelVersion": 10,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:22:34-04:00"
+    },
+    {
       "path": "levels/rssaromeo/real-map--8.json",
       "levelName": "real map #8",
       "creatorName": "rssaromeo",
