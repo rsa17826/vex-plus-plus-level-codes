@@ -1,0 +1,42 @@
+name: Keep open PRs up to date
+
+# Stand-in for GitHub's merge queue (unavailable here -- private repo on a
+# plan that doesn't include it). Runs after every push to main and updates
+# every other open PR's branch onto the new tip, same effect as someone
+# clicking "Update branch" -- except automatic, and it happens after every
+# merge, not just once. Each update is a real commit, which re-fires that
+# PR's pull_request:synchronize event, re-running validate-level-pr.yml
+# against the fresh base; once that passes, the existing automerge job in
+# that workflow takes it from there. Branches that are already up to date
+# get a harmless no-op from the API call.
+#
+# Not truly atomic the way merge queue is -- if two PRs' updates land at
+# nearly the same instant you could still see a narrow re-race -- but it
+# converges: each push to main re-triggers this again, so a PR can't stay
+# stale for more than one cycle.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      # PAT, not GITHUB_TOKEN -- same reason as everywhere else in this
+      # pipeline: GitHub Actions doesn't fire new workflow runs for events
+      # (including the synchronize this update produces) caused by its own
+      # default token.
+      - env:
+          GH_TOKEN: ${{ secrets.MANIFEST_PR_TOKEN }}
+        run: |
+          for pr in $(gh pr list --repo "${{ github.repository }}" --base main --state open --json number --jq '.[].number'); do
+            echo "updating branch for PR #$pr"
+            gh api -X PUT "repos/${{ github.repository }}/pulls/$pr/update-branch" \
+              && echo "  updated" \
+              || echo "  already up to date (or update failed -- check the PR)"
+          done
