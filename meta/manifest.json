@@ -31,6 +31,36 @@
       "uploadedAt": "2026-10-04T21:54:30Z"
     },
     {
+      "path": "levels/rssaromeo/multi-version-level.json",
+      "levelName": "multi-version level",
+      "creatorName": "rssaromeo",
+      "description": "the inner levels show a version that allows passage for each section",
+      "gameVersion": 224,
+      "levelVersion": 74,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:06:41-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---sliding-down.json",
+      "levelName": "uno mas - sliding down",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 233,
+      "levelVersion": 7,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:06:16-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--27.json",
+      "levelName": "real map #27",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 233,
+      "levelVersion": 49,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:05:48-04:00"
+    },
+    {
       "path": "levels/rssaromeo/explosion-test.json",
       "levelName": "explosion test",
       "creatorName": "rssaromeo",
