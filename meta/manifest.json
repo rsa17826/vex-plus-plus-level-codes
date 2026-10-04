@@ -37,12 +37,48 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/checkpointless-checkpoint-bug.json",
+      "levelName": "checkpointless checkpoint bug",
+      "creatorName": "rssaromeo",
+      "description": "shows a bug that allows a setup that saves progress like a checkpoint but without using checkpoints",
+      "gameVersion": 249,
+      "levelVersion": 101,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/explosion-test.json",
+      "levelName": "explosion test",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 101,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/meowagain-again.json",
+      "levelName": "meowagain again",
+      "creatorName": "rssaromeo",
+      "description": "was going to be a twice twice of meowagain.zip but ended with not much of meowagain.zip left",
+      "gameVersion": 249,
+      "levelVersion": 172,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/meowagain-zip-rawr-7z.json",
       "levelName": "meowagain.zip.rawr.7z",
       "creatorName": "rssaromeo",
       "description": "WOW, new level. and so many arrows, must mean it'll be good, right...",
       "gameVersion": 249,
       "levelVersion": 164,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/move-or-die.json",
+      "levelName": "move or die",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 100,
       "verified": true
     },
     {
@@ -64,12 +100,120 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/real-mal--16.json",
+      "levelName": "real mal #16",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 96,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--10.json",
+      "levelName": "real map #10",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--11.json",
+      "levelName": "real map #11",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--12.json",
+      "levelName": "real map #12",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--13.json",
+      "levelName": "real map #13",
+      "creatorName": "rssaromeo",
+      "description": "my first nojump map",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--15.json",
+      "levelName": "real map #15",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 134,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--16.json",
+      "levelName": "real map #16",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 96,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--17.json",
+      "levelName": "real map #17",
+      "creatorName": "rssaromeo",
+      "description": "trying to make a map using every block in every way i can think of",
+      "gameVersion": 249,
+      "levelVersion": 399,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--18.json",
+      "levelName": "real map #18",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 142,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--19.json",
+      "levelName": "real map #19",
+      "creatorName": "rssaromeo",
+      "description": "a twicetwice of the level \"socal security card\" by Yippie",
+      "gameVersion": 249,
+      "levelVersion": 295,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--21.json",
+      "levelName": "real map #21",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 58,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/real-map--23.json",
       "levelName": "real map #23",
       "creatorName": "rssaromeo",
       "description": "NO DESCRIPTION SET",
       "gameVersion": 249,
       "levelVersion": 203,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--24.json",
+      "levelName": "real map #24",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 55,
       "verified": true
     },
     {
@@ -109,6 +253,42 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/real-map--5.json",
+      "levelName": "real map #5",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--6.json",
+      "levelName": "real map #6",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--7.json",
+      "levelName": "real map #7",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--8.json",
+      "levelName": "real map #8",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/real-map-6.json",
       "levelName": "real map 6",
       "creatorName": "rssaromeo",
@@ -133,6 +313,15 @@
       "description": "NO DESCRIPTION SET",
       "gameVersion": 249,
       "levelVersion": 111,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/solar-attach-bug.json",
+      "levelName": "solar attach bug",
+      "creatorName": "rssaromeo",
+      "description": "shows a bug where solars don't get attached to if respawning while they are disabled",
+      "gameVersion": 249,
+      "levelVersion": 12,
       "verified": true
     },
     {
@@ -181,6 +370,15 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/uno-mas---invisible-spikes---no-alpha.json",
+      "levelName": "uno mas - invisible spikes - no alpha",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 20,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---more-extra-jumps.json",
       "levelName": "uno mas - more extra jumps",
       "creatorName": "rssaromeo",
@@ -214,6 +412,15 @@
       "description": "even in death the player can still collide with goals",
       "gameVersion": 249,
       "levelVersion": 2,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---slide-push.json",
+      "levelName": "uno mas - slide push",
+      "creatorName": "rssaromeo",
+      "description": "you can just push boxes while sliding",
+      "gameVersion": 249,
+      "levelVersion": 15,
       "verified": true
     },
     {
@@ -262,12 +469,39 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/uno-mas---swim-in-air.json",
+      "levelName": "uno mas - swim in air",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 66,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---water-crouch.json",
+      "levelName": "uno mas - water crouch",
+      "creatorName": "rssaromeo",
+      "description": "while sliding you hitbox is smaller, and this is not reset while in water",
+      "gameVersion": 249,
+      "levelVersion": 15,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---zipline-death-warp.json",
       "levelName": "uno mas - zipline death warp",
       "creatorName": "rssaromeo",
       "description": "dying while on a pulley causes the player y to be that of the pulley instead of the player's spawn point",
       "gameVersion": 249,
       "levelVersion": 181,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/vex-3.json",
+      "levelName": "vex 3",
+      "creatorName": "rssaromeo",
+      "description": "vex 3",
+      "gameVersion": 249,
+      "levelVersion": 951,
       "verified": true
     }
   ]
