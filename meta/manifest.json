@@ -1,3 +1,14 @@
 {
-  "levels": []
+  "levels": [
+    {
+      "path": "levels/rssaromeo/uno-mas---water-jump.json",
+      "levelName": "uno mas - water jump",
+      "creatorName": "rssaromeo",
+      "description": "cyote time doesn't decrease while in water so walk into the water\nthen right after exiting the water jump to get a boost\nfrom exiting water and from the jump to go far higher than normal",
+      "gameVersion": 136,
+      "levelVersion": 11,
+      "verified": true,
+      "uploadedAt": "2026-10-04T17:26:43-04:00"
+    }
+  ]
 }
