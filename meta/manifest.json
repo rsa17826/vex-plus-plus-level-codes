@@ -141,6 +141,36 @@
       "uploadedAt": "2026-10-04T21:54:30Z"
     },
     {
+      "path": "levels/rssaromeo/uno-mas---water-crouch.json",
+      "levelName": "uno mas - water crouch",
+      "creatorName": "rssaromeo",
+      "description": "while sliding you hitbox is smaller, and this is not reset while in water",
+      "gameVersion": 136,
+      "levelVersion": 8,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:12:32-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--17.json",
+      "levelName": "real map #17",
+      "creatorName": "rssaromeo",
+      "description": "trying to make a map using every block in every way i can think of",
+      "gameVersion": 118,
+      "levelVersion": 398,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:53-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---sticky-button.json",
+      "levelName": "uno mas - sticky button",
+      "creatorName": "rssaromeo",
+      "description": "crouching and dying while on a floor button causes the button to be pressed down until the player represses and releases the button",
+      "gameVersion": 104,
+      "levelVersion": 26,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:43-04:00"
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---more-extra-jumps.json",
       "levelName": "uno mas - more extra jumps",
       "creatorName": "rssaromeo",
