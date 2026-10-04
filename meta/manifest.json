@@ -21,6 +21,16 @@
       "uploadedAt": "2026-10-04T21:54:30Z"
     },
     {
+      "path": "levels/rssaromeo/explosion-test.json",
+      "levelName": "explosion test",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 53,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T17:58:08-04:00"
+    },
+    {
       "path": "levels/rssaromeo/real-map--6.json",
       "levelName": "real map #6",
       "creatorName": "rssaromeo",
