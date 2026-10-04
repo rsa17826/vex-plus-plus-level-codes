@@ -15,10 +15,27 @@ regenerating it would produce -- not just well-formed, but the real thing.
 import glob
 import json
 import os
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from common import verify_level
+
+
+def commit_timestamp(path: str) -> str:
+    """ISO 8601 commit date of the most recent commit touching this path, per
+    the repo's own git history -- not anything the uploader supplies, so it
+    can't be gamed to rank a level artificially high. Needs real history in
+    the checkout (fetch-depth: 0); returns "" if none is found, which sorts
+    last rather than crashing the whole build."""
+    try:
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%cI", "--", path],
+            capture_output=True, text=True, check=True,
+        ).stdout.strip()
+        return out
+    except subprocess.CalledProcessError:
+        return ""
 
 
 def build_manifest_entries() -> list[dict]:
@@ -48,7 +65,12 @@ def build_manifest_entries() -> list[dict]:
             "gameVersion": level.get("gameVersion"),
             "levelVersion": level.get("levelVersion"),
             "verified": verified,
+            "uploadedAt": commit_timestamp(path),
         })
+
+    # Newest first. "" (no history found) sorts smallest, so with reverse=True
+    # those entries fall to the bottom instead of crashing or landing on top.
+    entries.sort(key=lambda e: e["uploadedAt"], reverse=True)
     return entries
 
 

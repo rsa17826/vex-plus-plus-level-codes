@@ -24,7 +24,7 @@ jobs:
       # MANIFEST_PR_TOKEN (Settings -> Secrets and variables -> Actions).
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0 # full history -- build_manifest.py reads each level's git commit date to sort newest-first
           token: ${{ secrets.MANIFEST_PR_TOKEN }}
 
       - uses: actions/setup-python@v5
