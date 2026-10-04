@@ -1,0 +1,40 @@
+{
+  "levels": [
+    {
+      "path": "levels/asd/real map #28.json",
+      "levelName": "real map #28",
+      "creatorName": "asd234",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 242,
+      "levelVersion": 110,
+      "verified": false
+    },
+    {
+      "path": "levels/asd/test112.json",
+      "levelName": "test112",
+      "creatorName": "asd",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/ax.json",
+      "levelName": "ax",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno mas - slightly limp jump.json",
+      "levelName": "uno mas - slightly limp jump",
+      "creatorName": "rssaromeo",
+      "description": "don't know why but jumping as soon as you grab the ledge gives a\nslightly limper jump than if waiting before jumping\n",
+      "gameVersion": 249,
+      "levelVersion": 8,
+      "verified": true
+    }
+  ]
+}
