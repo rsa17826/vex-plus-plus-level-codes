@@ -1,6 +1,26 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/uno-mas---invisible-spikes---no-alpha.json",
+      "levelName": "uno mas - invisible spikes - no alpha",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 135,
+      "levelVersion": 16,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:16:33Z"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--12.json",
+      "levelName": "real map #12",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 94,
+      "levelVersion": 1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:15:12Z"
+    },
+    {
       "path": "levels/rssaromeo/short-level--1.json",
       "levelName": "short level #1",
       "creatorName": "rssaromeo",
