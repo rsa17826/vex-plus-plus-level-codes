@@ -1,6 +1,26 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/uno-mas---star-checkpoint.json",
+      "levelName": "uno mas - star checkpoint",
+      "creatorName": "rssaromeo",
+      "description": "stars cause player data to be resaved which saves the player run direction",
+      "gameVersion": 113,
+      "levelVersion": 11,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:07:48Z"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---more-jumps.json",
+      "levelName": "uno mas - more jumps",
+      "creatorName": "rssaromeo",
+      "description": "pulleys give an extra jump",
+      "gameVersion": 113,
+      "levelVersion": 24,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:07:26Z"
+    },
+    {
       "path": "levels/rssaromeo/meowagain-zip-rawr-7z.json",
       "levelName": "meowagain.zip.rawr.7z",
       "creatorName": "rssaromeo",
@@ -29,6 +49,56 @@
       "levelVersion": -1,
       "verified": true,
       "uploadedAt": "2026-10-04T21:54:30Z"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--28.json",
+      "levelName": "real map #28",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 242,
+      "levelVersion": 110,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:08:10-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/another-normal-level.json",
+      "levelName": "another normal level",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 28,
+      "levelVersion": 1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:07:07-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/multi-version-level.json",
+      "levelName": "multi-version level",
+      "creatorName": "rssaromeo",
+      "description": "the inner levels show a version that allows passage for each section",
+      "gameVersion": 224,
+      "levelVersion": 74,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:06:41-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---sliding-down.json",
+      "levelName": "uno mas - sliding down",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 233,
+      "levelVersion": 7,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:06:16-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--27.json",
+      "levelName": "real map #27",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 233,
+      "levelVersion": 49,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:05:48-04:00"
     },
     {
       "path": "levels/rssaromeo/explosion-test.json",
