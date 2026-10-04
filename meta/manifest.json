@@ -19,6 +19,15 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/another-normal-level.json",
+      "levelName": "another normal level",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/ax.json",
       "levelName": "ax",
       "creatorName": "rssaromeo",
@@ -34,6 +43,15 @@
       "description": "the inner levels show a version that allows passage for each section",
       "gameVersion": 249,
       "levelVersion": 75,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--23.json",
+      "levelName": "real map #23",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 203,
       "verified": true
     },
     {
@@ -82,6 +100,24 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/short-level--1.json",
+      "levelName": "short level #1",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 47,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/small.json",
+      "levelName": "small",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 111,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/tut.json",
       "levelName": "tut",
       "creatorName": "rssaromeo",
@@ -109,12 +145,66 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/uno-mas---falling-up.json",
+      "levelName": "uno mas - falling up",
+      "creatorName": "rssaromeo",
+      "description": "vex 3",
+      "gameVersion": 249,
+      "levelVersion": 46,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---more-extra-jumps.json",
+      "levelName": "uno mas - more extra jumps",
+      "creatorName": "rssaromeo",
+      "description": "getting pushed off a ledge doesn't remove a jump",
+      "gameVersion": 249,
+      "levelVersion": 17,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---more-jumps.json",
+      "levelName": "uno mas - more jumps",
+      "creatorName": "rssaromeo",
+      "description": "pulleys give an extra jump",
+      "gameVersion": 249,
+      "levelVersion": 25,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---post-death-momentum.json",
+      "levelName": "uno mas - post death momentum",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 22,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---post-death-win.json",
+      "levelName": "uno mas - post death win",
+      "creatorName": "rssaromeo",
+      "description": "even in death the player can still collide with goals",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---sliding-down.json",
       "levelName": "uno mas - sliding down",
       "creatorName": "rssaromeo",
       "description": "NO DESCRIPTION SET",
       "gameVersion": 249,
       "levelVersion": 8,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---solar-attach-bug.json",
+      "levelName": "uno mas - solar attach bug",
+      "creatorName": "rssaromeo",
+      "description": "shows a bug where solars don't get attached to if respawning while they are disabled",
+      "gameVersion": 249,
+      "levelVersion": 9,
       "verified": true
     },
     {
