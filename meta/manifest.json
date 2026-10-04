@@ -1,6 +1,16 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/real-level--2.json",
+      "levelName": "real level #2",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 20,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T21:54:30Z"
+    },
+    {
       "path": "levels/rssaromeo/real-map.json",
       "levelName": "real map",
       "creatorName": "rssaromeo",
