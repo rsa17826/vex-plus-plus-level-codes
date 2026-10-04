@@ -11,6 +11,10 @@ permissions:
   contents: write
   pull-requests: write
 
+concurrency:
+  group: manifest-update
+  cancel-in-progress: false
+
 jobs:
   build-manifest:
     runs-on: ubuntu-latest
