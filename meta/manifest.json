@@ -1,6 +1,26 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/checkpointless-checkpoint-bug.json",
+      "levelName": "checkpointless checkpoint bug",
+      "creatorName": "rssaromeo",
+      "description": "shows a bug that allows a setup that saves progress like a checkpoint but without using checkpoints",
+      "gameVersion": 81,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:17Z"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--24.json",
+      "levelName": "real map #24",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 198,
+      "levelVersion": 54,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:15Z"
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---star-checkpoint.json",
       "levelName": "uno mas - star checkpoint",
       "creatorName": "rssaromeo",
