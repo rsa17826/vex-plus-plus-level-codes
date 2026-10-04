@@ -161,6 +161,16 @@
       "uploadedAt": "2026-10-04T21:54:30Z"
     },
     {
+      "path": "levels/rssaromeo/real-map--8.json",
+      "levelName": "real map #8",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 72,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:17:24-04:00"
+    },
+    {
       "path": "levels/rssaromeo/real-map--15.json",
       "levelName": "real map #15",
       "creatorName": "rssaromeo",
