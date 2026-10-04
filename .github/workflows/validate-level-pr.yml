@@ -1,0 +1,48 @@
+name: Validate level PR
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history: needed for the re-registration check
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install cryptography
+
+      - run: python scripts/validate_pr.py
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+
+  # Separate job so this only runs once `validate` has actually posted a
+  # completed status -- branch protection needs that before it'll allow the
+  # merge through, even from this same workflow.
+  automerge:
+    needs: validate
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr merge --squash --auto \
+            "${{ github.event.pull_request.number }}" \
+            --repo "${{ github.repository }}"
