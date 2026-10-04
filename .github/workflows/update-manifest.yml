@@ -9,14 +9,23 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   build-manifest:
     runs-on: ubuntu-latest
     steps:
+      # Uses a PAT, not the default GITHUB_TOKEN: GitHub deliberately does
+      # NOT fire pull_request events for PRs opened with the default token
+      # (anti-loop guard), which would mean validate-level-pr.yml never runs
+      # on this PR and --auto merge sits pending forever. Create a
+      # fine-grained PAT scoped to just this repo with Contents: read/write
+      # and Pull requests: read/write, then add it as a repo secret named
+      # MANIFEST_PR_TOKEN (Settings -> Secrets and variables -> Actions).
       - uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          token: ${{ secrets.MANIFEST_PR_TOKEN }}
 
       - uses: actions/setup-python@v5
         with:
@@ -26,19 +35,32 @@ jobs:
 
       - run: python scripts/build_manifest.py
 
-      # NOTE: this pushes straight to main. If branch protection has "require
-      # a pull request before merging" turned on, this push will be rejected
-      # unless you exempt the Actions bot: Settings -> Rules -> your
-      # ruleset -> Bypass list -> add "GitHub Actions" (or Settings ->
-      # Branches -> classic protection -> "Allow specified actors to bypass
-      # required pull requests" -> add the github-actions app).
-      - run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+      - id: diff
+        run: |
           git add meta/manifest.json
           if git diff --cached --quiet; then
-            echo "manifest unchanged"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git commit -m "update levels manifest"
-            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # Goes through the same PR path as everything else -- this repo no
+      # longer allows direct pushes to main at all, bot included. The PR
+      # this opens only ever touches meta/manifest.json by itself, which is
+      # exactly what validate-level-pr.yml's manifest-only path checks and
+      # auto-merges, so no bypass permissions are needed anywhere.
+      - if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.MANIFEST_PR_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="manifest-update-${{ github.run_id }}-${{ github.run_attempt }}"
+          git checkout -b "$BRANCH"
+          git commit -m "update levels manifest"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "Update levels manifest" \
+            --body "Automated manifest rebuild triggered by ${{ github.sha }}." \
+            --base main --head "$BRANCH"
+          gh pr merge --squash --auto "$BRANCH" --repo "${{ github.repository }}"
