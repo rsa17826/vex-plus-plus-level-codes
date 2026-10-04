@@ -19,12 +19,48 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/another-normal-level.json",
+      "levelName": "another normal level",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/ax.json",
       "levelName": "ax",
       "creatorName": "rssaromeo",
       "description": "NO DESCRIPTION SET",
       "gameVersion": 249,
       "levelVersion": 2,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/multi-version-level.json",
+      "levelName": "multi-version level",
+      "creatorName": "rssaromeo",
+      "description": "the inner levels show a version that allows passage for each section",
+      "gameVersion": 249,
+      "levelVersion": 75,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--25.json",
+      "levelName": "real map #25",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 111,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--26.json",
+      "levelName": "real map #26",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 74,
       "verified": true
     },
     {
@@ -55,6 +91,15 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/small.json",
+      "levelName": "small",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 111,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/tut.json",
       "levelName": "tut",
       "creatorName": "rssaromeo",
@@ -79,6 +124,33 @@
       "description": "breaking ice doesn't require falling",
       "gameVersion": 249,
       "levelVersion": 6,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---post-death-win.json",
+      "levelName": "uno mas - post death win",
+      "creatorName": "rssaromeo",
+      "description": "even in death the player can still collide with goals",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---sliding-down.json",
+      "levelName": "uno mas - sliding down",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 8,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---sticky-button.json",
+      "levelName": "uno mas - sticky button",
+      "creatorName": "rssaromeo",
+      "description": "crouching and dying while on a floor button causes the button to be pressed down until the player represses and releases the button",
+      "gameVersion": 249,
+      "levelVersion": 27,
       "verified": true
     },
     {
