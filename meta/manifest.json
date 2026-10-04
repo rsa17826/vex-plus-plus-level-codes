@@ -1,6 +1,36 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/uno-mas---breaking-ice.json",
+      "levelName": "uno mas - breaking ice",
+      "creatorName": "rssaromeo",
+      "description": "breaking ice doesn't require falling",
+      "gameVersion": 90,
+      "levelVersion": 5,
+      "verified": true,
+      "uploadedAt": "2026-10-04T17:48:54-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---falling-up.json",
+      "levelName": "uno mas - falling up",
+      "creatorName": "rssaromeo",
+      "description": "vex 3",
+      "gameVersion": 226,
+      "levelVersion": 45,
+      "verified": true,
+      "uploadedAt": "2026-10-04T17:48:25-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--25.json",
+      "levelName": "real map #25",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 198,
+      "levelVersion": 110,
+      "verified": true,
+      "uploadedAt": "2026-10-04T17:47:55-04:00"
+    },
+    {
       "path": "levels/rssaromeo/small.json",
       "levelName": "small",
       "creatorName": "rssaromeo",
