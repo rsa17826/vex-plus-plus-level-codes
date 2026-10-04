@@ -1,6 +1,16 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/meowagain-again.json",
+      "levelName": "meowagain again",
+      "creatorName": "rssaromeo",
+      "description": "was going to be a twice twice of meowagain.zip but ended with not much of meowagain.zip left",
+      "gameVersion": 185,
+      "levelVersion": 171,
+      "verified": true,
+      "uploadedAt": "2026-10-04T17:46:36-04:00"
+    },
+    {
       "path": "levels/rssaromeo/spark-block-map.json",
       "levelName": "spark block map",
       "creatorName": "rssaromeo",
