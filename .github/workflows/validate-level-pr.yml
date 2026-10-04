@@ -40,8 +40,16 @@ jobs:
       contents: write
       pull-requests: write
     steps:
+      # Must use a PAT here, NOT the default GITHUB_TOKEN: GitHub does not
+      # fire new workflow runs for events the default token itself causes --
+      # and that includes the push this merge produces on main, not just
+      # pull_request events. Merging with GITHUB_TOKEN means
+      # update-manifest.yml silently never triggers. Reuses the same PAT
+      # update-manifest.yml needs for the same reason (see that file) --
+      # one secret, contents:write + pull-requests:write, scoped to this
+      # repo only.
       - env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.MANIFEST_PR_TOKEN }}
         run: |
           gh pr merge --squash --auto \
             "${{ github.event.pull_request.number }}" \
