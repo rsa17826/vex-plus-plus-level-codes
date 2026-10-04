@@ -55,6 +55,15 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/grav-test.json",
+      "levelName": "grav test",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/level-1-copy.json",
       "levelName": "level 1 copy",
       "creatorName": "rssaromeo",
@@ -111,6 +120,15 @@
     {
       "path": "levels/rssaromeo/real-level--2.json",
       "levelName": "real level #2",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-level--9.json",
+      "levelName": "real level #9",
       "creatorName": "rssaromeo",
       "description": "NO DESCRIPTION SET",
       "gameVersion": 249,
