@@ -51,6 +51,46 @@
       "uploadedAt": "2026-10-04T21:54:30Z"
     },
     {
+      "path": "levels/rssaromeo/vex-3.json",
+      "levelName": "vex 3",
+      "creatorName": "rssaromeo",
+      "description": "vex 3 but now fixed and with some new original stars\n",
+      "gameVersion": 201,
+      "levelVersion": 1343,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:10:36-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--18.json",
+      "levelName": "real map #18",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 124,
+      "levelVersion": 141,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:10:13-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/move-or-die.json",
+      "levelName": "move or die",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 139,
+      "levelVersion": 99,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:09:47-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--21.json",
+      "levelName": "real map #21",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 179,
+      "levelVersion": 57,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:09:28-04:00"
+    },
+    {
       "path": "levels/rssaromeo/real-map--26.json",
       "levelName": "real map #26",
       "creatorName": "rssaromeo",
