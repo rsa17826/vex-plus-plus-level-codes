@@ -28,6 +28,15 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/real-map--27.json",
+      "levelName": "real map #27",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 50,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/real-map--28.json",
       "levelName": "real map #28",
       "creatorName": "rssaromeo",
@@ -37,10 +46,46 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/real-map-6.json",
+      "levelName": "real map 6",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 2,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/tut.json",
+      "levelName": "tut",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 399,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/uno mas - slightly limp jump.json",
       "levelName": "uno mas - slightly limp jump",
       "creatorName": "rssaromeo",
       "description": "don't know why but jumping as soon as you grab the ledge gives a\nslightly limper jump than if waiting before jumping\n",
+      "gameVersion": 249,
+      "levelVersion": 8,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---breaking-ice.json",
+      "levelName": "uno mas - breaking ice",
+      "creatorName": "rssaromeo",
+      "description": "breaking ice doesn't require falling",
+      "gameVersion": 249,
+      "levelVersion": 6,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---sliding-down.json",
+      "levelName": "uno mas - sliding down",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
       "gameVersion": 249,
       "levelVersion": 8,
       "verified": true
