@@ -37,12 +37,57 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/meowagain-again.json",
+      "levelName": "meowagain again",
+      "creatorName": "rssaromeo",
+      "description": "was going to be a twice twice of meowagain.zip but ended with not much of meowagain.zip left",
+      "gameVersion": 249,
+      "levelVersion": 172,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/meowagain-zip-rawr-7z.json",
+      "levelName": "meowagain.zip.rawr.7z",
+      "creatorName": "rssaromeo",
+      "description": "WOW, new level. and so many arrows, must mean it'll be good, right...",
+      "gameVersion": 249,
+      "levelVersion": 164,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/move-or-die.json",
+      "levelName": "move or die",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 100,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/moving-things.json",
+      "levelName": "moving things",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/multi-version-level.json",
       "levelName": "multi-version level",
       "creatorName": "rssaromeo",
       "description": "the inner levels show a version that allows passage for each section",
       "gameVersion": 249,
       "levelVersion": 75,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/real-map--23.json",
+      "levelName": "real map #23",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 203,
       "verified": true
     },
     {
@@ -109,6 +154,15 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/spark-block-map.json",
+      "levelName": "spark block map",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 249,
+      "levelVersion": 1,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/tut.json",
       "levelName": "tut",
       "creatorName": "rssaromeo",
@@ -136,12 +190,30 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/uno-mas---falling-up.json",
+      "levelName": "uno mas - falling up",
+      "creatorName": "rssaromeo",
+      "description": "vex 3",
+      "gameVersion": 249,
+      "levelVersion": 46,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---more-extra-jumps.json",
       "levelName": "uno mas - more extra jumps",
       "creatorName": "rssaromeo",
       "description": "getting pushed off a ledge doesn't remove a jump",
       "gameVersion": 249,
       "levelVersion": 17,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---more-jumps.json",
+      "levelName": "uno mas - more jumps",
+      "creatorName": "rssaromeo",
+      "description": "pulleys give an extra jump",
+      "gameVersion": 249,
+      "levelVersion": 25,
       "verified": true
     },
     {
@@ -172,6 +244,24 @@
       "verified": true
     },
     {
+      "path": "levels/rssaromeo/uno-mas---solar-attach-bug.json",
+      "levelName": "uno mas - solar attach bug",
+      "creatorName": "rssaromeo",
+      "description": "shows a bug where solars don't get attached to if respawning while they are disabled",
+      "gameVersion": 249,
+      "levelVersion": 9,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---star-checkpoint.json",
+      "levelName": "uno mas - star checkpoint",
+      "creatorName": "rssaromeo",
+      "description": "stars cause player data to be resaved which saves the player run direction",
+      "gameVersion": 249,
+      "levelVersion": 12,
+      "verified": true
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---sticky-button.json",
       "levelName": "uno mas - sticky button",
       "creatorName": "rssaromeo",
@@ -187,6 +277,15 @@
       "description": "NO DESCRIPTION SET",
       "gameVersion": 249,
       "levelVersion": 79,
+      "verified": true
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---zipline-death-warp.json",
+      "levelName": "uno mas - zipline death warp",
+      "creatorName": "rssaromeo",
+      "description": "dying while on a pulley causes the player y to be that of the pulley instead of the player's spawn point",
+      "gameVersion": 249,
+      "levelVersion": 181,
       "verified": true
     }
   ]
