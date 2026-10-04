@@ -1,6 +1,36 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/uno-mas---swim-in-air.json",
+      "levelName": "uno mas - swim in air",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 191,
+      "levelVersion": 65,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:19Z"
+    },
+    {
+      "path": "levels/rssaromeo/checkpointless-checkpoint-bug.json",
+      "levelName": "checkpointless checkpoint bug",
+      "creatorName": "rssaromeo",
+      "description": "shows a bug that allows a setup that saves progress like a checkpoint but without using checkpoints",
+      "gameVersion": 81,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:17Z"
+    },
+    {
+      "path": "levels/rssaromeo/real-map--24.json",
+      "levelName": "real map #24",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 198,
+      "levelVersion": 54,
+      "verified": true,
+      "uploadedAt": "2026-10-04T22:11:15Z"
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---star-checkpoint.json",
       "levelName": "uno mas - star checkpoint",
       "creatorName": "rssaromeo",
@@ -49,6 +79,26 @@
       "levelVersion": -1,
       "verified": true,
       "uploadedAt": "2026-10-04T21:54:30Z"
+    },
+    {
+      "path": "levels/rssaromeo/moving-things.json",
+      "levelName": "moving things",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 46,
+      "levelVersion": -1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:21-04:00"
+    },
+    {
+      "path": "levels/rssaromeo/uno-mas---post-death-win.json",
+      "levelName": "uno mas - post death win",
+      "creatorName": "rssaromeo",
+      "description": "even in death the player can still collide with goals",
+      "gameVersion": 94,
+      "levelVersion": 1,
+      "verified": true,
+      "uploadedAt": "2026-10-04T18:11:18-04:00"
     },
     {
       "path": "levels/rssaromeo/vex-3.json",
