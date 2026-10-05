@@ -10,16 +10,25 @@ Enforces, per PR:
     deleted): regenerates the manifest from the current working tree and
     requires the PR's submitted file to match that regeneration byte for
     byte. Anything hand-edited or stale gets rejected.
-  - users/levels PR: may only touch users/<name>.pub or
-    levels/<name>/<level>.json, all for the same <name> (one user per PR).
+  - users/levels PR: may only touch users/<name>.pub,
+    levels/<name>/<level>.json ("latest"), or
+    levels/<name>/<level>/<version>.json ("history"), all for the same
+    <name> (one user per PR).
       - users/<name>.pub: creation only -- never modified, never deleted,
         and never re-created if that path has ever existed before (name is
         permanently claimed on first registration).
-      - levels/<name>/<level>.json: never deleted; creatorName inside the
-        file must match the <name> in its own path; signature must verify
-        against the registry key for <name> as it stood on the PR's base
-        commit (not the PR branch -- a PR can't register a key and use it
-        in the same PR).
+      - latest file: never deleted; creatorName inside the file must match
+        the <name> in its own path; signature must verify against the
+        registry key for <name> as it stood on the PR's base commit (not
+        the PR branch -- a PR can't register a key and use it in the same
+        PR).
+      - history file: creation only -- never modified or deleted once
+        written (append-only version log); its embedded levelVersion must
+        match the <version> in its own filename; same creatorName/signature
+        checks as the latest file.
+      - a PR that touches a latest file must touch the matching history
+        file in the SAME PR with byte-identical content, and vice versa --
+        the two can never land separately, so they can never drift apart.
 
 Exits non-zero (failing the check) on the first violation found.
 """
@@ -36,7 +45,8 @@ from common import verify_level
 BASE_SHA = os.environ["BASE_SHA"]
 HEAD_SHA = os.environ["HEAD_SHA"]
 
-LEVEL_PATH_RE = re.compile(r"^levels/([^/]+)/[^/]+\.json$")
+LATEST_PATH_RE = re.compile(r"^levels/([^/]+)/([^/]+)\.json$")
+HISTORY_PATH_RE = re.compile(r"^levels/([^/]+)/([^/]+)/(\d+)\.json$")
 PUB_PATH_RE = re.compile(r"^users/([^/]+)\.pub$")
 MANIFEST_PATH = "meta/manifest.json"
 
@@ -95,15 +105,52 @@ def validate_manifest_only_pr(status: str) -> None:
     print("manifest matches a clean regeneration -- all checks passed")
 
 
+def check_level_json(path: str, name: str, expected_version: int | None) -> str:
+    """Common checks for a latest or history level file: valid JSON,
+    creatorName matches the path's owner, signature verifies against the
+    BASE branch's registered key for that owner, and (for history files)
+    the embedded levelVersion matches the version in the filename. Returns
+    the raw file content (for the latest<->history byte-identity check)."""
+    content = read_file_at(HEAD_SHA, path)
+    if content is None:
+        fail(f"{path}: could not read file from PR head")
+    try:
+        level = json.loads(content)
+    except json.JSONDecodeError:
+        fail(f"{path}: not valid JSON")
+        return ""  # unreachable, keeps type-checkers happy
+
+    if level.get("creatorName") != name:
+        fail(f"{path}: creatorName '{level.get('creatorName')}' does not match folder owner '{name}'")
+
+    if expected_version is not None and level.get("levelVersion") != expected_version:
+        fail(f"{path}: levelVersion in the file ({level.get('levelVersion')}) "
+             f"does not match the version in its filename ({expected_version})")
+
+    registry_content = read_file_at(BASE_SHA, f"users/{name}.pub")
+    if registry_content is None:
+        fail(f"{path}: no registered public key for '{name}' on the base branch -- "
+             f"register the username in its own PR first, then open this one")
+
+    if not verify_level(level, registry_content):
+        fail(f"{path}: signature does not verify against the registered key for '{name}'")
+
+    return content
+
+
 def validate_ownership_pr(files: list[tuple[str, str]]) -> None:
     touched_names: set[str] = set()
+    # keyed by (name, levelSlug)
+    latest_content: dict[tuple[str, str], str] = {}
+    history_content: dict[tuple[str, str], str] = {}
 
     for status, path in files:
         if path == MANIFEST_PATH:
             fail(f"{MANIFEST_PATH}: manifest changes must be the only change in a PR")
 
         pub_match = PUB_PATH_RE.match(path)
-        level_match = LEVEL_PATH_RE.match(path)
+        history_match = HISTORY_PATH_RE.match(path)
+        latest_match = None if history_match else LATEST_PATH_RE.match(path)
 
         if pub_match:
             name = pub_match.group(1)
@@ -115,34 +162,37 @@ def validate_ownership_pr(files: list[tuple[str, str]]) -> None:
             if status == "A" and path_existed_in_history(path):
                 fail(f"{path}: username '{name}' was registered before and can't be re-registered")
 
-        elif level_match:
-            name = level_match.group(1)
+        elif history_match:
+            name, slug, version_str = history_match.groups()
+            touched_names.add(name)
+            if status != "A":
+                fail(f"{path}: version history is append-only -- cannot modify or delete an existing entry")
+            history_content[(name, slug)] = check_level_json(path, name, int(version_str))
+
+        elif latest_match:
+            name, slug = latest_match.groups()
             touched_names.add(name)
             if status == "D":
                 fail(f"{path}: deleting levels is not allowed through this pipeline")
-
-            content = read_file_at(HEAD_SHA, path)
-            if content is None:
-                fail(f"{path}: could not read file from PR head")
-            try:
-                level = json.loads(content)
-            except json.JSONDecodeError:
-                fail(f"{path}: not valid JSON")
-                return  # unreachable, keeps type-checkers happy
-
-            if level.get("creatorName") != name:
-                fail(f"{path}: creatorName '{level.get('creatorName')}' does not match folder owner '{name}'")
-
-            registry_content = read_file_at(BASE_SHA, f"users/{name}.pub")
-            if registry_content is None:
-                fail(f"{path}: no registered public key for '{name}' on the base branch -- "
-                     f"register the username in its own PR first, then open this one")
-
-            if not verify_level(level, registry_content):
-                fail(f"{path}: signature does not verify against the registered key for '{name}'")
+            latest_content[(name, slug)] = check_level_json(path, name, None)
 
         else:
-            fail(f"{path}: PRs may only touch users/<name>.pub, levels/<name>/<level>.json, or {MANIFEST_PATH} alone")
+            fail(f"{path}: PRs may only touch users/<name>.pub, levels/<name>/<level>.json, "
+                 f"levels/<name>/<level>/<version>.json, or {MANIFEST_PATH} alone")
+
+    # Latest and its history entry must always travel together, byte-for-byte
+    # identical, so they can never diverge.
+    all_keys = set(latest_content) | set(history_content)
+    for key in all_keys:
+        name, slug = key
+        if key not in latest_content:
+            fail(f"levels/{name}/{slug}/...: a version history entry was added without "
+                 f"updating levels/{name}/{slug}.json to match, in the same PR")
+        if key not in history_content:
+            fail(f"levels/{name}/{slug}.json: updated without adding a matching version "
+                 f"history entry under levels/{name}/{slug}/, in the same PR")
+        if latest_content[key] != history_content[key]:
+            fail(f"levels/{name}/{slug}.json and its version history entry must be byte-identical")
 
     if len(touched_names) > 1:
         fail(f"PR touches files for multiple users {sorted(touched_names)} -- keep one user per PR")

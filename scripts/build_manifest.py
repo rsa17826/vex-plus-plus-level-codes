@@ -57,6 +57,12 @@ def build_manifest_entries() -> list[dict]:
 
         verified = bool(registry_key) and verify_level(level, registry_key)
 
+        # History dir mirrors every version ever uploaded, including the
+        # current one (uploadLevel in LevelServer.gd writes both together),
+        # so total-1 is how many OLDER versions exist besides this one.
+        history_glob = path[: -len(".json")] + "/*.json"
+        old_version_count = max(0, len(glob.glob(history_glob)) - 1)
+
         entries.append({
             "path": path,
             "levelName": level.get("levelName"),
@@ -66,6 +72,7 @@ def build_manifest_entries() -> list[dict]:
             "levelVersion": level.get("levelVersion"),
             "verified": verified,
             "uploadedAt": commit_timestamp(path),
+            "oldVersionCount": old_version_count,
         })
 
     # Newest first. "" (no history found) sorts smallest, so with reverse=True
