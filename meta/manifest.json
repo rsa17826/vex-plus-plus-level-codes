@@ -5,10 +5,10 @@
       "levelName": "uno mas - slightly limp jump",
       "creatorName": "rssaromeo",
       "description": "don't know why but jumping as soon as you grab the ledge gives a\nslightly limper jump than if waiting before jumping\n",
-      "gameVersion": 249,
-      "levelVersion": 8,
+      "gameVersion": 252,
+      "levelVersion": 10,
       "verified": true,
-      "uploadedAt": "2026-10-05T13:44:51-04:00"
+      "uploadedAt": "2026-10-05T13:56:56-04:00"
     },
     {
       "path": "levels/rssaromeo/real-level--9.json",
