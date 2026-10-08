@@ -67,7 +67,15 @@ def changed_files() -> list[tuple[str, str]]:
 
 
 def path_existed_in_history(path: str) -> bool:
-    out = sh("git", "log", "--all", "--oneline", "--follow", "--", path)
+    # Scoped to BASE_SHA's own ancestry -- i.e. what's actually merged into
+    # the base branch -- NOT `--all`. `--all` walks every ref on the remote,
+    # including abandoned/never-merged branches (a setup PR that errored out
+    # before its branch got cleaned up, say), so it would flag a username as
+    # "already registered" even though the file never reached main. Checking
+    # from BASE_SHA still correctly finds a truly-registered-and-merged name
+    # even after squash-merge, since that creates its own commit on the base
+    # branch touching this path.
+    out = sh("git", "log", BASE_SHA, "--oneline", "--follow", "--", path)
     return bool(out.strip())
 
 
