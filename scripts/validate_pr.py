@@ -26,9 +26,15 @@ Enforces, per PR:
         written (append-only version log); its embedded levelVersion must
         match the <version> in its own filename; same creatorName/signature
         checks as the latest file.
-      - a PR that touches a latest file must touch the matching history
-        file in the SAME PR with byte-identical content, and vice versa --
-        the two can never land separately, so they can never drift apart.
+      - version history holds whatever is being REPLACED, not the new
+        upload. A latest file added fresh (status "A", level didn't exist
+        on the base branch) must bring zero history files with it -- there's
+        nothing to archive yet. A latest file that's being updated (status
+        "M") must bring exactly one new history file in the SAME PR, and
+        that history file's content must be byte-identical to what latest
+        held on the BASE branch (i.e. the version being overwritten) -- not
+        the new HEAD content. This is what guarantees every overwrite
+        leaves a trail and latest/history can never drift apart.
 
 Exits non-zero (failing the check) on the first violation found.
 """
@@ -118,7 +124,7 @@ def check_level_json(path: str, name: str, expected_version: int | None) -> str:
     creatorName matches the path's owner, signature verifies against the
     BASE branch's registered key for that owner, and (for history files)
     the embedded levelVersion matches the version in the filename. Returns
-    the raw file content (for the latest<->history byte-identity check)."""
+    the raw file content."""
     content = read_file_at(HEAD_SHA, path)
     if content is None:
         fail(f"{path}: could not read file from PR head")
@@ -149,8 +155,8 @@ def check_level_json(path: str, name: str, expected_version: int | None) -> str:
 def validate_ownership_pr(files: list[tuple[str, str]]) -> None:
     touched_names: set[str] = set()
     # keyed by (name, levelSlug)
-    latest_content: dict[tuple[str, str], str] = {}
-    history_content: dict[tuple[str, str], str] = {}
+    latest_status: dict[tuple[str, str], str] = {}
+    history_paths: dict[tuple[str, str], list[str]] = {}
 
     for status, path in files:
         if path == MANIFEST_PATH:
@@ -175,32 +181,57 @@ def validate_ownership_pr(files: list[tuple[str, str]]) -> None:
             touched_names.add(name)
             if status != "A":
                 fail(f"{path}: version history is append-only -- cannot modify or delete an existing entry")
-            history_content[(name, slug)] = check_level_json(path, name, int(version_str))
+            check_level_json(path, name, int(version_str))
+            history_paths.setdefault((name, slug), []).append(path)
 
         elif latest_match:
             name, slug = latest_match.groups()
             touched_names.add(name)
             if status == "D":
                 fail(f"{path}: deleting levels is not allowed through this pipeline")
-            latest_content[(name, slug)] = check_level_json(path, name, None)
+            check_level_json(path, name, None)
+            latest_status[(name, slug)] = status
 
         else:
             fail(f"{path}: PRs may only touch users/<name>.pub, levels/<name>/<level>.json, "
                  f"levels/<name>/<level>/<version>.json, or {MANIFEST_PATH} alone")
 
-    # Latest and its history entry must always travel together, byte-for-byte
-    # identical, so they can never diverge.
-    all_keys = set(latest_content) | set(history_content)
+    # History now holds whatever's being REPLACED, not the new upload, so the
+    # pairing rule is asymmetric: a brand-new level (status "A") has nothing
+    # to archive yet and must bring zero history files; an update (status
+    # "M") must bring exactly one new history file, and its content must
+    # match what latest held on the BASE branch -- the version it replaces.
+    all_keys = set(latest_status) | set(history_paths)
     for key in all_keys:
         name, slug = key
-        if key not in latest_content:
+        latest_path = f"levels/{name}/{slug}.json"
+        status = latest_status.get(key)
+        entries = history_paths.get(key, [])
+
+        if key not in latest_status:
             fail(f"levels/{name}/{slug}/...: a version history entry was added without "
-                 f"updating levels/{name}/{slug}.json to match, in the same PR")
-        if key not in history_content:
-            fail(f"levels/{name}/{slug}.json: updated without adding a matching version "
-                 f"history entry under levels/{name}/{slug}/, in the same PR")
-        if latest_content[key] != history_content[key]:
-            fail(f"levels/{name}/{slug}.json and its version history entry must be byte-identical")
+                 f"touching {latest_path} in the same PR")
+
+        if status == "A":
+            if entries:
+                fail(f"{latest_path}: brand-new level -- it must not bring any version "
+                     f"history files with it (nothing to archive yet)")
+        else:  # status == "M"
+            if not entries:
+                fail(f"{latest_path}: updated without archiving the version it replaces under "
+                     f"levels/{name}/{slug}/, in the same PR")
+            if len(entries) > 1:
+                fail(f"{latest_path}: more than one version history entry added in the same PR "
+                     f"-- exactly one (the version being replaced) is expected")
+            history_path = entries[0]
+            old_latest = read_file_at(BASE_SHA, latest_path)
+            if old_latest is None:
+                fail(f"{latest_path}: no prior version found on the base branch to archive")
+            new_history = read_file_at(HEAD_SHA, history_path)
+            if new_history != old_latest:
+                fail(f"{history_path}: must be byte-identical to what {latest_path} held on "
+                     f"the base branch -- history archives the version being replaced, not the "
+                     f"new upload")
 
     if len(touched_names) > 1:
         fail(f"PR touches files for multiple users {sorted(touched_names)} -- keep one user per PR")

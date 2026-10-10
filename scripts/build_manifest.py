@@ -57,11 +57,13 @@ def build_manifest_entries() -> list[dict]:
 
         verified = bool(registry_key) and verify_level(level, registry_key)
 
-        # History dir mirrors every version ever uploaded, including the
-        # current one (uploadLevel in LevelServer.gd writes both together),
-        # so total-1 is how many OLDER versions exist besides this one.
+        # History dir now holds only strictly-superseded versions -- each
+        # overwrite archives whatever WAS in latest before replacing it
+        # (see uploadLevel in LevelServer.gd), so the current version is
+        # never in there. Total history files == how many older versions
+        # exist besides this one.
         history_glob = path[: -len(".json")] + "/*.json"
-        old_version_count = max(0, len(glob.glob(history_glob)) - 1)
+        old_version_count = len(glob.glob(history_glob))
 
         entries.append({
             "path": path,
