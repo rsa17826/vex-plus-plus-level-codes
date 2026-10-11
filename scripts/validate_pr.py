@@ -52,7 +52,7 @@ BASE_SHA = os.environ["BASE_SHA"]
 HEAD_SHA = os.environ["HEAD_SHA"]
 
 LATEST_PATH_RE = re.compile(r"^levels/([^/]+)/([^/]+)\.json$")
-HISTORY_PATH_RE = re.compile(r"^levels/([^/]+)/([^/]+)/(\d+)\.json$")
+HISTORY_PATH_RE = re.compile(r"^levels/([^/]+)/([^/]+)/(-?\d+)\.json$")
 PUB_PATH_RE = re.compile(r"^users/([^/]+)\.pub$")
 MANIFEST_PATH = "meta/manifest.json"
 
