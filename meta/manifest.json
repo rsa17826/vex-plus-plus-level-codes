@@ -1,6 +1,17 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/multiplayer-test.json",
+      "levelName": "multiplayer test",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 255,
+      "levelVersion": 13,
+      "verified": true,
+      "uploadedAt": "2026-10-15T17:03:16-04:00",
+      "oldVersionCount": 0
+    },
+    {
       "path": "levels/rssaromeo/real-map--4.json",
       "levelName": "real map #4",
       "creatorName": "rssaromeo",
