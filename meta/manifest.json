@@ -1,6 +1,17 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/uno-mas---infinite-keys.json",
+      "levelName": "uno mas - infinite keys",
+      "creatorName": "rssaromeo",
+      "description": "NO DESCRIPTION SET",
+      "gameVersion": 255,
+      "levelVersion": 20,
+      "verified": true,
+      "uploadedAt": "2026-10-15T17:15:53-04:00",
+      "oldVersionCount": 0
+    },
+    {
       "path": "levels/rssaromeo/multiplayer-test.json",
       "levelName": "multiplayer test",
       "creatorName": "rssaromeo",
