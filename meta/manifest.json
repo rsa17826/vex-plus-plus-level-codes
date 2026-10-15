@@ -6,10 +6,10 @@
       "creatorName": "rssaromeo",
       "description": "NO DESCRIPTION SET",
       "gameVersion": 255,
-      "levelVersion": 31,
+      "levelVersion": 60,
       "verified": true,
-      "uploadedAt": "2026-10-15T17:50:38-04:00",
-      "oldVersionCount": 1
+      "uploadedAt": "2026-10-15T17:59:28-04:00",
+      "oldVersionCount": 2
     },
     {
       "path": "levels/rssaromeo/multiplayer-test.json",
