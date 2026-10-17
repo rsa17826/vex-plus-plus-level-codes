@@ -1,6 +1,17 @@
 {
   "levels": [
     {
+      "path": "levels/rssaromeo/vex-3.json",
+      "levelName": "vex 3",
+      "creatorName": "rssaromeo",
+      "description": "vex 3 but now fixed and with some new original stars\n",
+      "gameVersion": 255,
+      "levelVersion": 1353,
+      "verified": true,
+      "uploadedAt": "2026-10-17T10:35:20-04:00",
+      "oldVersionCount": 1
+    },
+    {
       "path": "levels/rssaromeo/uno-mas---infinite-keys.json",
       "levelName": "uno mas - infinite keys",
       "creatorName": "rssaromeo",
@@ -394,17 +405,6 @@
       "levelVersion": 1,
       "verified": true,
       "uploadedAt": "2026-10-04T18:11:18-04:00",
-      "oldVersionCount": 0
-    },
-    {
-      "path": "levels/rssaromeo/vex-3.json",
-      "levelName": "vex 3",
-      "creatorName": "rssaromeo",
-      "description": "vex 3 but now fixed and with some new original stars\n",
-      "gameVersion": 201,
-      "levelVersion": 1343,
-      "verified": true,
-      "uploadedAt": "2026-10-04T18:10:36-04:00",
       "oldVersionCount": 0
     },
     {
